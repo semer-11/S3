@@ -23,7 +23,7 @@ class UploadController extends Controller
         $path = $request->file('image')->store('/user_uploads','public');
 
         return response()->json([
-            'status' => 'fail',
+            'status' => 'success',
             'path' => env('APP_URL') . "/storage/$path"
         ]);
     }
